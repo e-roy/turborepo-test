@@ -8,12 +8,26 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev --scope=playground --no-deps",
+    "dev:docs": "turbo run dev --scope=docs --no-deps",
+    "dev:all": "turbo run dev --parallel",
+    "dev:turbo": "turbo run dev --scope=test-turbo --no-deps",
+    "test:turbo": "yarn workspace test-turbo test",
+    "test:turbo:coverage": "yarn workspace test-turbo test --coverage",
+    "storybook": "turbo run sb --scope=storybook --no-deps",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "postinstall": "preconstruct dev",
+    "prebuild": "preconstruct build",
+    "release": "yarn prebuild && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.2",
+    "@changesets/cli": "^2.18.1",
+    "@preconstruct/cli": "^2.2.0",
+    "chromatic": "^6.7.0",
     "eslint-config-custom": "*",
+    "husky": "^7.0.4",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -22,5 +36,10 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
+  "preconstruct": {
+    "packages": [
+      "packages/test-turbo/*"
+    ]
+  },
   "packageManager": "yarn@1.22.18"
 }
