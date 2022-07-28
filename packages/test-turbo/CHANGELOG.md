@@ -1,5 +1,21 @@
 # test-turbo
 
+## 0.2.1
+
+### Patch Changes
+
+- updated npmignore test
+
+## 0.2.0
+
+### Minor Changes
+
+- npmignore test
+
+### Patch Changes
+
+- npm ignore test
+
 ## 0.1.2
 
 ### Patch Changes
