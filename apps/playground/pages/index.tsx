@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import {
   darkTheme,
   Address,
@@ -14,13 +14,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-} from "test-turbo";
+} from 'test-turbo';
 
 export default function Web() {
-  const [theme, setTheme] = useState("theme-default");
+  const [theme, setTheme] = useState('theme-default');
 
   useEffect(() => {
-    document.body.classList.remove("theme-default", darkTheme);
+    document.body.classList.remove('theme-default', darkTheme);
     document.body.classList.add(theme);
   }, [theme]);
   return (
@@ -29,16 +29,18 @@ export default function Web() {
         <button
           onClick={() =>
             setTheme(
-              theme === "theme-default" ? darkTheme.className : "theme-default"
+              theme === 'theme-default' ? darkTheme.className : 'theme-default'
             )
           }
         >
-          {theme === "theme-default" ? "Dark" : "Light"}
+          {theme === 'theme-default' ? 'Dark' : 'Light'}
         </button>
       </header>
+      <Button>helloo</Button>
+
       <h1>Playground</h1>
-      <Button>hello</Button>
-      <Badge variant={"lime"}>badge</Badge>
+      <Button size={'md'}>helloo</Button>
+      <Badge variant={'lime'}>badge</Badge>
       <Address value="0xb8c2C29ee19D8307cb7255e1Cd9CbDE883A267d5" />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>

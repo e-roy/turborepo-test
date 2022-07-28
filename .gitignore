@@ -34,3 +34,6 @@ yarn-error.log*
 
 # storybook
 apps/storybook/storybook-static/
+
+# packages
+dist/

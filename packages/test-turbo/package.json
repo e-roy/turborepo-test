@@ -1,10 +1,12 @@
 {
   "name": "test-turbo",
-  "version": "0.1.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "version": "0.1.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "build": "tsup ./index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup ./index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "eslint *.ts*",
     "test": "jest",
     "test:watch": "yarn test --watch",
@@ -29,6 +31,7 @@
     "react": "18.1.0",
     "tsconfig": "*",
     "ts-jest": "^28.0.5",
+    "tsup": "^6.2.0",
     "typescript": "^4.5.2"
   },
   "dependencies": {
@@ -36,5 +39,8 @@
     "@stitches/react": "^1.2.8",
     "ethers": "^5.6.9",
     "wagmi": "^0.5.10"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
