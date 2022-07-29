@@ -4,9 +4,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/eslint-plugin-next',
   ],
   env: {
     es6: true,
