@@ -1,6 +1,6 @@
 {
   "name": "test-turbo",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
@@ -29,6 +29,7 @@
     "@types/react-dom": "^18.0.6",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
+    "ethers": "^5.6.9",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
     "react": "18.1.0",
@@ -39,9 +40,13 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
-    "@stitches/react": "^1.2.8",
-    "ethers": "^5.6.9",
-    "wagmi": "^0.5.10"
+    "@stitches/react": "^1.2.8"
+  },
+  "peerDependencies": {
+    "ethers": ">=5.5.1",
+    "react": ">=17",
+    "react-dom": ">=17",
+    "wagmi": "0.5.x"
   },
   "publishConfig": {
     "access": "public"

@@ -1,12 +1,10 @@
+node_modules/
 .turbo/
 theme/
 utils/
 coverage/
 
-index.tsx
-common/
-components/
-elements/
+src/
 
 jest.config.js
 tsconfig.json

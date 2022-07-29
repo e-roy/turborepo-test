@@ -1,5 +1,17 @@
 # test-turbo
 
+## 0.2.3
+
+### Patch Changes
+
+- test peer dependencys
+
+## 0.2.2
+
+### Patch Changes
+
+- moved to src folder
+
 ## 0.2.1
 
 ### Patch Changes
