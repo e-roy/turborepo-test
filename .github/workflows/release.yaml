@@ -24,7 +24,7 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Create Release Pull Request
-        uses: changesets/action@master
+        uses: changesets/action@main
         with:
           publish: 'yarn release'
         env:
