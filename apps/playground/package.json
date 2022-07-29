@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "clean": "rm -rf node_modules && rm -rf .next",
-    "clean-windows": "rd /s /q node_modules && rd /s /q .next"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.2.0",

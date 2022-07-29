@@ -3,7 +3,6 @@
   "version": "0.2.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "sideEffects": false,
   "license": "MIT",
   "scripts": {
     "build": "tsup ./src/index.tsx --format esm,cjs --dts --external react",
@@ -11,9 +10,7 @@
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "test": "jest",
     "test:watch": "yarn test --watch",
-    "test:coverage": "jest --coverage --colors",
-    "clean": "rm -rf node_modules",
-    "clean-windows": "rd /s /q node_modules"
+    "test:coverage": "jest --coverage --colors"
   },
   "devDependencies": {
     "@radix-ui/colors": "^0.1.8",

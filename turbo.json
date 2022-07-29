@@ -21,12 +21,6 @@
     },
     "sb": {
       "cache": false
-    },
-    "clean": {
-      "cache": false
-    },
-    "clean-windows": {
-      "cache": false
     }
   }
 }

@@ -4,10 +4,6 @@
   "private": true,
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "clean": "rm -rf node_modules",
-    "clean-windows": "rd /s /q node_modules"
-  },
   "dependencies": {
     "@next/eslint-plugin-next": "^12.2.3",
     "eslint": "^8.20.0",

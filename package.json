@@ -8,11 +8,12 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --filter=playground^... --no-deps",
-    "storybook": "turbo run sb --filter=storybook^... --no-deps",
+    "dev": "turbo run dev --scope=playground --no-deps",
     "dev:docs": "turbo run dev --no-cache --filter=docs^... --no-deps",
+    "storybook": "turbo run sb --filter=storybook^... --no-deps",
+    "dev:all": "turbo run dev --parallel",
+    "dev:turbo": "turbo run dev --scope=test-turbo --no-deps",
     "test": "yarn workspace test-turbo test",
-    "test:turbo": "turbo run test --filter=test-turbo^...",
     "test:coverage": "yarn workspace test-turbo test --coverage",
     "clean": "turbo run clean",
     "clean-windows": "turbo run clean-windows",
@@ -22,7 +23,7 @@
     "prebuild": "preconstruct build",
     "update-version": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=turbo-test^... && changeset publish"
+    "release": "turbo run build --filter=test-turbo^... && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.2",
