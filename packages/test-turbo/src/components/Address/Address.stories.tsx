@@ -1,9 +1,9 @@
-import { Address } from "./";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { WagmiDecorator } from "../../../../apps/storybook/.storybook/decorator";
+import { Address } from './';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { WagmiDecorator } from '../../../../../apps/storybook/.storybook/decorator';
 
 export default {
-  title: "Components/Address",
+  title: 'Components/Address',
   component: Address,
   argTypes: {},
   decorators: [WagmiDecorator],
@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof Address> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  value: "0xb8c2C29ee19D8307cb7255e1Cd9CbDE883A267d5",
+  value: '0xb8c2C29ee19D8307cb7255e1Cd9CbDE883A267d5',
   copiable: false,
   shortened: false,
   ens: false,

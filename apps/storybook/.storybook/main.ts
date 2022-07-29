@@ -1,53 +1,42 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   stories: [
-    "../../../packages/test-turbo/elements/**/*.stories.@(js|jsx|ts|tsx)",
-    "../../../packages/test-turbo/components/**/*.stories.@(js|jsx|ts|tsx)",
+    '../../../packages/test-turbo/src/elements/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../packages/test-turbo/src/components/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    "@storybook/addon-links",
+    '@storybook/addon-links',
     {
-      name: "@storybook/addon-essentials",
+      name: '@storybook/addon-essentials',
       options: {
         actions: false,
       },
     },
-    // {
-    //   name: "@storybook/addon-postcss",
-    //   options: {
-    //     cssLoaderOptions: {
-    //       importLoaders: 1,
-    //     },
-    //     postcssLoaderOptions: {
-    //       implementation: require("postcss"),
-    //     },
-    //   },
-    // },
   ],
-  framework: "@storybook/react",
+  framework: '@storybook/react',
   core: {
-    builder: "webpack5",
+    builder: 'webpack5',
   },
-  // webpackFinal: (config) => {
-  //   /**
-  //    * Add support for alias-imports
-  //    * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
-  //    */
-  //   config.resolve.alias = {
-  //     ...config.resolve?.alias,
-  //     "@": [path.resolve(__dirname, "../src/"), path.resolve(__dirname, "../")],
-  //   };
+  webpackFinal: (config) => {
+    /**
+     * Add support for alias-imports
+     * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
+     */
+    config.resolve.alias = {
+      ...config.resolve?.alias,
+      '@': [path.resolve(__dirname, '../src/'), path.resolve(__dirname, '../')],
+    };
 
-  //   /**
-  //    * Fixes font import with /
-  //    * @see https://github.com/storybookjs/storybook/issues/12844#issuecomment-867544160
-  //    */
-  //   config.resolve.roots = [
-  //     path.resolve(__dirname, "../public"),
-  //     "node_modules",
-  //   ];
+    /**
+     * Fixes font import with /
+     * @see https://github.com/storybookjs/storybook/issues/12844#issuecomment-867544160
+     */
+    config.resolve.roots = [
+      path.resolve(__dirname, '../public'),
+      'node_modules',
+    ];
 
-  //   return config;
-  // },
+    return config;
+  },
 };

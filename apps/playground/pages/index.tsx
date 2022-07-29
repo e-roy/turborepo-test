@@ -14,7 +14,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-} from 'test-turbo';
+} from 'test-turbo/src';
 
 export default function Web() {
   const [theme, setTheme] = useState('theme-default');
